@@ -36,6 +36,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="lG3-Un-ODI" kind="show" id="y3Y-bW-faO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77254901960784317" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,8 +121,129 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
+        <!--Add CarVC-->
+        <scene sceneID="baC-It-p6W">
+            <objects>
+                <viewController id="lG3-Un-ODI" customClass="AddCarVC" customModule="CarsForSale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eg-FM-5cf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ix-U8-7fe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NEW CAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="So4-Ph-vwn">
+                                        <rect key="frame" x="115" y="32.5" width="145.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-v6-gdn">
+                                        <rect key="frame" x="8" y="29" width="53" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelBtnPressed:" destination="lG3-Un-ODI" eventType="touchUpInside" id="gIp-lW-B4X"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7725490196" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="So4-Ph-vwn" firstAttribute="centerX" secondItem="8Ix-U8-7fe" secondAttribute="centerX" id="2lb-MK-svM"/>
+                                    <constraint firstAttribute="bottom" secondItem="So4-Ph-vwn" secondAttribute="bottom" constant="8" id="NTu-FL-zc0"/>
+                                    <constraint firstAttribute="height" constant="65" id="Q6h-1B-qMK"/>
+                                    <constraint firstItem="So4-Ph-vwn" firstAttribute="centerY" secondItem="pfh-v6-gdn" secondAttribute="centerY" id="Rot-v4-PmC"/>
+                                    <constraint firstItem="So4-Ph-vwn" firstAttribute="leading" relation="lessThanOrEqual" secondItem="pfh-v6-gdn" secondAttribute="trailing" constant="61" id="Wsr-mk-K76"/>
+                                    <constraint firstItem="pfh-v6-gdn" firstAttribute="leading" secondItem="8Ix-U8-7fe" secondAttribute="leading" constant="8" id="iyo-ie-hfr"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pcu-SL-kCK">
+                                <rect key="frame" x="67.5" y="105" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Es9-8D-Vf7"/>
+                                    <constraint firstAttribute="width" constant="240" id="ahd-Mf-IDb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-8Q-jPH">
+                                <rect key="frame" x="67.5" y="105" width="240" height="240"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="+ Add Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPicBtnPressed:" destination="lG3-Un-ODI" eventType="touchUpInside" id="Xj8-Qe-hX0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voc-va-tuR">
+                                <rect key="frame" x="8" y="361" width="359" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="l8d-lb-GYW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kS-zt-b62">
+                                <rect key="frame" x="8" y="404" width="359" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wmV-n9-fZp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW6-th-rRu">
+                                <rect key="frame" x="8" y="601" width="359" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C3N-8o-SBg"/>
+                                </constraints>
+                                <state key="normal" title="ADD CAR">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCarBtnPressed:" destination="lG3-Un-ODI" eventType="touchUpInside" id="WEt-Lf-fb9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eW6-th-rRu" firstAttribute="leading" secondItem="QiR-iY-BGX" secondAttribute="leading" constant="8" id="1PR-gh-pt0"/>
+                            <constraint firstItem="8Ix-U8-7fe" firstAttribute="leading" secondItem="QiR-iY-BGX" secondAttribute="leading" id="4MY-1b-nYV"/>
+                            <constraint firstItem="pcu-SL-kCK" firstAttribute="top" secondItem="8Ix-U8-7fe" secondAttribute="bottom" constant="40" id="C6m-BQ-c1m"/>
+                            <constraint firstItem="VXT-8Q-jPH" firstAttribute="centerY" secondItem="pcu-SL-kCK" secondAttribute="centerY" id="D7r-1c-xrW"/>
+                            <constraint firstItem="3kS-zt-b62" firstAttribute="leading" secondItem="QiR-iY-BGX" secondAttribute="leading" constant="8" id="DEF-r1-4mb"/>
+                            <constraint firstItem="8Ix-U8-7fe" firstAttribute="top" secondItem="1eg-FM-5cf" secondAttribute="top" id="Gbp-YS-N6s"/>
+                            <constraint firstItem="VXT-8Q-jPH" firstAttribute="width" secondItem="pcu-SL-kCK" secondAttribute="width" id="Rgr-Qk-ZEI"/>
+                            <constraint firstItem="VXT-8Q-jPH" firstAttribute="height" secondItem="pcu-SL-kCK" secondAttribute="height" id="Te2-4o-yoU"/>
+                            <constraint firstItem="VXT-8Q-jPH" firstAttribute="centerX" secondItem="pcu-SL-kCK" secondAttribute="centerX" id="apS-OW-wcu"/>
+                            <constraint firstItem="8Ix-U8-7fe" firstAttribute="trailing" secondItem="QiR-iY-BGX" secondAttribute="trailing" id="dBZ-xX-tMD"/>
+                            <constraint firstItem="QiR-iY-BGX" firstAttribute="bottom" secondItem="eW6-th-rRu" secondAttribute="bottom" constant="16" id="fpP-2u-G7v"/>
+                            <constraint firstItem="voc-va-tuR" firstAttribute="leading" secondItem="QiR-iY-BGX" secondAttribute="leading" constant="8" id="kDB-mF-0gh"/>
+                            <constraint firstItem="3kS-zt-b62" firstAttribute="top" secondItem="voc-va-tuR" secondAttribute="bottom" constant="8" id="kvj-pf-sKv"/>
+                            <constraint firstItem="QiR-iY-BGX" firstAttribute="trailing" secondItem="voc-va-tuR" secondAttribute="trailing" constant="8" id="qt1-wg-32x"/>
+                            <constraint firstItem="pcu-SL-kCK" firstAttribute="centerX" secondItem="1eg-FM-5cf" secondAttribute="centerX" id="rMi-5N-8jY"/>
+                            <constraint firstItem="QiR-iY-BGX" firstAttribute="trailing" secondItem="eW6-th-rRu" secondAttribute="trailing" constant="8" id="sp5-dp-Cgi"/>
+                            <constraint firstItem="voc-va-tuR" firstAttribute="top" secondItem="pcu-SL-kCK" secondAttribute="bottom" constant="16" id="vse-uy-etG"/>
+                            <constraint firstItem="QiR-iY-BGX" firstAttribute="trailing" secondItem="3kS-zt-b62" secondAttribute="trailing" constant="8" id="xuv-DO-GOm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QiR-iY-BGX"/>
+                    </view>
+                    <connections>
+                        <outlet property="brandTextField" destination="voc-va-tuR" id="tEF-Vj-lsP"/>
+                        <outlet property="carImageView" destination="pcu-SL-kCK" id="rI8-Uz-Pqb"/>
+                        <outlet property="modelTextField" destination="3kS-zt-b62" id="qwF-vK-gQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8D-3v-9a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="28"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CarLogo" width="240" height="240"/>
         <image name="ExampleCar" width="4032" height="3024"/>
     </resources>
 </document>

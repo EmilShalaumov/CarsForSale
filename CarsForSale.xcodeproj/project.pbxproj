@@ -14,6 +14,7 @@
 		E4D7C56B22EDE58E0092C801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D7C56922EDE58E0092C801 /* LaunchScreen.storyboard */; };
 		E4D7C57422EDE9930092C801 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7C57322EDE9930092C801 /* Car.swift */; };
 		E4D7C57722EDEAF60092C801 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7C57622EDEAF60092C801 /* CarCell.swift */; };
+		E4D7C57A22EDEFC80092C801 /* AddCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7C57922EDEFC80092C801 /* AddCarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4D7C56C22EDE58E0092C801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D7C57322EDE9930092C801 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		E4D7C57622EDEAF60092C801 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		E4D7C57922EDEFC80092C801 /* AddCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E4D7C55F22EDE58C0092C801 /* CarsForSale */ = {
 			isa = PBXGroup;
 			children = (
+				E4D7C57822EDEFA80092C801 /* Controller */,
 				E4D7C57522EDEAD40092C801 /* View */,
 				E4D7C57222EDE9830092C801 /* Model */,
 				E4D7C56022EDE58C0092C801 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				E4D7C57622EDEAF60092C801 /* CarCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E4D7C57822EDEFA80092C801 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4D7C57922EDEFC80092C801 /* AddCarVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				E4D7C56322EDE58C0092C801 /* ViewController.swift in Sources */,
 				E4D7C56122EDE58C0092C801 /* AppDelegate.swift in Sources */,
 				E4D7C57722EDEAF60092C801 /* CarCell.swift in Sources */,
+				E4D7C57A22EDEFC80092C801 /* AddCarVC.swift in Sources */,
 				E4D7C57422EDE9930092C801 /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -292,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

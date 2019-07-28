@@ -9,6 +9,8 @@
 import Foundation
 
 class Car {
+    static var cars = [Car]()
+
     fileprivate var _photo: String!
     fileprivate var _brand: String!
     fileprivate var _model: String!

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarsForSale" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dW-Ks-Vfq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARS FOR SALE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onT-8U-8wH">
+                                        <rect key="frame" x="106" y="32.5" width="163" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kme-bj-Ou9">
+                                        <rect key="frame" x="337" y="33" width="30" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="MvJ-rf-vej"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77254901960784317" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kme-bj-Ou9" firstAttribute="centerY" secondItem="onT-8U-8wH" secondAttribute="centerY" id="2za-6D-OIf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kme-bj-Ou9" secondAttribute="trailing" constant="8" id="ASo-lg-QUQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="onT-8U-8wH" secondAttribute="bottom" constant="8" id="I1h-It-f25"/>
+                                    <constraint firstItem="onT-8U-8wH" firstAttribute="centerX" secondItem="9dW-Ks-Vfq" secondAttribute="centerX" id="TSv-VG-uAz"/>
+                                    <constraint firstAttribute="height" constant="65" id="iWc-Rt-Uus"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="spI-hL-91t">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarCell" rowHeight="100" id="KRs-8I-ero" customClass="CarCell" customModule="CarsForSale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KRs-8I-ero" id="h1G-Iq-QpW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExampleCar" translatesAutoresizingMaskIntoConstraints="NO" id="XHh-wN-AiG">
+                                                    <rect key="frame" x="8" y="8.5" width="84" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="84" id="JAt-Cc-uKS"/>
+                                                        <constraint firstAttribute="width" constant="84" id="gTf-zd-QCU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hyundai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-f9-yEd">
+                                                    <rect key="frame" x="100" y="8.5" width="76" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solaris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZb-hT-QUN">
+                                                    <rect key="frame" x="100" y="36.5" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="RQV-f9-yEd" secondAttribute="trailing" constant="199" id="3wv-ED-Hbd"/>
+                                                <constraint firstItem="RQV-f9-yEd" firstAttribute="top" secondItem="XHh-wN-AiG" secondAttribute="top" id="5v6-nH-vdb"/>
+                                                <constraint firstItem="qZb-hT-QUN" firstAttribute="top" secondItem="RQV-f9-yEd" secondAttribute="bottom" constant="4" id="Akz-q7-bnY"/>
+                                                <constraint firstItem="RQV-f9-yEd" firstAttribute="leading" secondItem="XHh-wN-AiG" secondAttribute="trailing" constant="8" id="L1v-OZ-1cG"/>
+                                                <constraint firstAttribute="bottom" secondItem="XHh-wN-AiG" secondAttribute="bottom" constant="8" id="ca7-Rp-21L"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="qZb-hT-QUN" secondAttribute="trailing" constant="208" id="gMT-uC-dnZ"/>
+                                                <constraint firstItem="qZb-hT-QUN" firstAttribute="leading" secondItem="RQV-f9-yEd" secondAttribute="leading" id="juv-cy-xEg"/>
+                                                <constraint firstItem="XHh-wN-AiG" firstAttribute="leading" secondItem="h1G-Iq-QpW" secondAttribute="leading" constant="8" id="oD3-DF-ygr"/>
+                                                <constraint firstItem="XHh-wN-AiG" firstAttribute="top" secondItem="h1G-Iq-QpW" secondAttribute="top" constant="8" id="xBq-ag-i58"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carBrand" destination="RQV-f9-yEd" id="mNT-yQ-Wjg"/>
+                                            <outlet property="carImg" destination="XHh-wN-AiG" id="Lw5-7u-yga"/>
+                                            <outlet property="carModel" destination="qZb-hT-QUN" id="VaP-wl-gE9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9dW-Ks-Vfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="99j-eV-2mB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="spI-hL-91t" secondAttribute="bottom" id="9H2-bb-Dsc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9dW-Ks-Vfq" secondAttribute="trailing" id="DXF-JA-GUr"/>
+                            <constraint firstItem="spI-hL-91t" firstAttribute="top" secondItem="9dW-Ks-Vfq" secondAttribute="bottom" id="IHc-z5-vEv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="spI-hL-91t" secondAttribute="trailing" id="ZyN-5V-lQl"/>
+                            <constraint firstItem="9dW-Ks-Vfq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iII-iQ-4og"/>
+                            <constraint firstItem="spI-hL-91t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJK-uZ-qfg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="spI-hL-91t" id="lzk-Ie-7Yp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ExampleCar" width="4032" height="3024"/>
+    </resources>
 </document>
